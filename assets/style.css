@@ -21,6 +21,13 @@ body {
     margin: 0px 0px
 }
 
+
+@media all and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+}
+
 header {
     background: rgb(49, 198, 101);
     padding: 5px 30px;
@@ -41,6 +48,7 @@ header .menu {
     align-items: center;
     justify-content: end;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 header .menu li {
@@ -69,7 +77,29 @@ a:active {
 header .logo-title {
     font-family: "Jost-bold";
     font-weight: 200;
-    width: 200px;
+    width: 100%;
+}
+
+
+
+
+
+@media all and (max-width: 1024px) {
+
+    header {
+
+        display: block;
+
+
+    }
+
+    header .menu {
+        justify-content: center;
+    }
+
+    header .logo-title {
+        text-align: center;
+    }
 }
 
 #banner .container,
@@ -83,7 +113,6 @@ header .logo-title {
     align-items: center;
     gap: 40px;
 }
-
 
 #banner .container .banner-img img {
     width: 520px;
@@ -259,6 +288,8 @@ header .logo-title {
     border: 1px solid #ccc;
     border-radius: 10px;
     height: 550px;
+    margin: 0 auto;
+
 
 }
 
@@ -267,15 +298,20 @@ header .logo-title {
     padding: 40px;
 }
 
+
+
 #book-now .container .book-form .book-form-inner .flex {
     display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+
+    gap: 10px;
+
+
 }
 
 input,
 textarea {
     width: 100%;
+    box-sizing: border-box;
     padding: 12px;
     border-radius: 5px;
     background: white;
@@ -283,6 +319,8 @@ textarea {
     font-family: "Jost";
     outline: none;
     transition: .4s border;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
 input:focus,
@@ -309,12 +347,14 @@ textarea:active {
 
 #contact-us .container .social-icons li a {
     background: rgb(49, 198, 101);
-    padding-top: 50px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    width: 75px;
+    height: 75px;
+    display: block;
     border-radius: 5px;
     transition: 0.3s;
+    text-align: center;
+    padding-top: 12px;
+    box-sizing: border-box;
 }
 
 #contact-us .container .social-icons li a:hover {
@@ -364,4 +404,113 @@ footer h1 {
 
 .flex.centered {
     justify-content: center;
+}
+
+
+/*------------------------------------------
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {}
+
+@media all and (min-width: 480px) and (max-width: 768px) {}
+
+@media all and (max-width: 1024px) {
+
+    #banner .container,
+    .container {
+
+        display: block;
+        text-align: center;
+    }
+
+    #banner .container .banner-img {
+        display: none;
+    }
+
+    #banner .container .banner-title {
+        font-size: 50px;
+    }
+
+    #banner .container .banner-words .subtitle {
+        font-size: 30px;
+    }
+
+    .title {
+        font-size: 30px !important;
+    }
+
+    .subtitle {
+        font-size: 36px !important;
+    }
+
+
+    #about-us .container .inner-container {
+
+        display: block;
+    }
+
+    .iframe {
+        height: 250px !important;
+        width: 100%;
+    }
+
+    #about-us .inner-container .words {
+        font-size: 15px;
+    }
+
+
+    #about-us .container {
+
+
+        height: auto !important;
+    }
+
+    #destinations .container .destination-list {
+
+        display: block;
+
+    }
+
+    .destination-list li a img {
+        height: 200px;
+    }
+
+    #book-now .container .book-words .subtitle {
+        font-size: 30px !important;
+    }
+
+    #book-now .container .book-words .book-title {
+
+        font-size: 36px;
+
+    }
+
+    #book-now .container .book-words ul {
+        text-align: start;
+    }
+
+    #book-now .container .book-form .book-form-inner .flex {
+        display: block;
+    }
+
+    #contact-us .container .social-icons li a img {
+        width: 30px;
+    }
+
+    #contact-us .container .social-icons li a {
+
+        width: 55px;
+        height: 55px;
+
+    }
+
+    #contact-us .container .social-icons {
+        justify-content: center !important;
+    }
 }
