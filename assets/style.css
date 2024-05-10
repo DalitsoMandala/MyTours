@@ -42,7 +42,7 @@ header .menu {
     text-align: center;
     align-items: center;
     justify-content: end;
-    flex-wrap: wrap;
+
     gap: 10px;
 }
 
